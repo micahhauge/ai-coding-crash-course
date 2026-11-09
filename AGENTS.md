@@ -1,0 +1,3 @@
+- **Services** — database access goes through `app/services/*Service.ts`; routes call them from `loader`/`action`.
+- **Access** — `app/lib/access.server.ts` is the single answer to "what may this user do with this course" (admin, owning instructor, enrollment, PPP blocking). Route permission checks go through it.
+- **Dev panel** — `app/components/dev-ui.tsx` switches the signed-in user and simulates a country for PPP pricing. Use it to check a change as a different role or region.
